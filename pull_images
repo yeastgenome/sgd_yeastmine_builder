@@ -1,2 +1,4 @@
-docker pull intermine/tomcat
-docker pull intermine/solr
+sudo docker pull intermine/tomcat
+sudo docker pull intermine/solr
+sudo docker network build
+sudo docker volume create intermine_data
