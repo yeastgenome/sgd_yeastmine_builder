@@ -1,2 +1,2 @@
-docker stop intermine_solr
-docker stop intermine_tomcat
+sudo docker stop intermine_solr
+sudo docker stop intermine_tomcat

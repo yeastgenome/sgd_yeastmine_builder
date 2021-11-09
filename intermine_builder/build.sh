@@ -85,6 +85,10 @@ if [ ! -f /root/.intermine/${MINE_NAME:-biotestmine}.properties ]; then
     sed -i "s/PSQL_DB_NAME/${MINE_NAME:-biotestmine}/g" /root/.intermine/${MINE_NAME:-biotestmine}.properties
     sed -i "s/INTERMINE_PSQL_USER/${INTERMINE_PGUSER:-postgres}/g" /root/.intermine/${MINE_NAME:-biotestmine}.properties
     sed -i "s/INTERMINE_PSQL_PWD/${INTERMINE_PGPASSWORD:-postgres}/g" /root/.intermine/${MINE_NAME:-biotestmine}.properties
+    sed -i "s/SPELL_USER/${SPELL_USER:-speller}/g" /root/.intermine/${MINE_NAME:-biotestmine}.properties
+    sed -i "s/SPELL_PWD/${SPELL_PWD:-password}/g" /root/.intermine/${MINE_NAME:-biotestmine}.properties
+    sed -i "s/SGD_USER/${SGD_USER:-speller}/g" /root/.intermine/${MINE_NAME:-biotestmine}.properties
+    sed -i "s/SGD_PWD/${SGD_PWD:-password}/g" /root/.intermine/${MINE_NAME:-biotestmine}.properties
     sed -i "s/TOMCAT_USER/${TOMCAT_USER:-tomcat}/g" /root/.intermine/${MINE_NAME:-biotestmine}.properties
     sed -i "s/TOMCAT_PWD/${TOMCAT_PWD:-tomcat}/g" /root/.intermine/${MINE_NAME:-biotestmine}.properties
     sed -i "s/webapp.deploy.url=http:\/\/localhost:8080/webapp.deploy.url=http:\/\/${TOMCAT_HOST:-tomcat}:${TOMCAT_PORT:-8080}/g" /root/.intermine/${MINE_NAME:-biotestmine}.properties
@@ -92,6 +96,8 @@ if [ ! -f /root/.intermine/${MINE_NAME:-biotestmine}.properties ]; then
     sed -i "s/project.sitePrefix=http:\/\/localhost:8080/project.sitePrefix=http:\/\/${TOMCAT_HOST:-tomcat}:${TOMCAT_PORT:-8080}/g" /root/.intermine/${MINE_NAME:-biotestmine}.properties
     sed -i "s/project.releaseVersion=Beta/project.releaseVersion=1.0.0/" /root/.intermine/${MINE_NAME:-biotestmine}.properties
     sed -i "s/serverName=INTERMINE_PGHOST/serverName=${INTERMINE_PGHOST:-postgres}:${INTERMINE_PGPORT:-5432}/g" /root/.intermine/${MINE_NAME:-biotestmine}.properties
+    sed -i "s/serverName=SPELL_HOST/serverName=${SPELL_HOST:-host}/g" /root/.intermine/${MINE_NAME:-biotestmine}.properties
+    sed -i "s/serverName=SGD_HOST/serverName=${SGD_HOST:-host}/g" /root/.intermine/${MINE_NAME:-biotestmine}.properties
 fi
 
 # Copy mine configs
