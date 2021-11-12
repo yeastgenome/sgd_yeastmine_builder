@@ -112,7 +112,7 @@ echo "$(date +%Y/%m/%d-%H:%M) Running project_build script"
 ./project_build -b -T localhost /root/dump/dump
 
 #echo "$(date +%Y/%m/%d-%H:%M) Gradle: build userDB" #>> /home/intermine/intermine/build.progress
-./gradlew buildUserDB --stacktrace #>> /home/intermine/intermine/build.progress
+#./gradlew buildUserDB --stacktrace #>> /home/intermine/intermine/build.progress
 
 echo "$(date +%Y/%m/%d-%H:%M) Gradle: build webapp" #>> /home/intermine/intermine/build.progress
 ./gradlew cargoRedeployRemote  --stacktrace #>> /home/intermine/intermine/build.progress
